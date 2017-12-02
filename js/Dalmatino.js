@@ -11,10 +11,12 @@ function nesto() {
     var currentTime = Date.parse(new Date());
     deadline = new Date(currentTime + timeInMinutes * 60 * 1000);
     timer();
+    document.getElementById("start").disabled = true;
 }
 
 
 function timer() {
+    
     var currentTime = Date.parse(new Date());
     countdownTime = deadline - currentTime;
     interval = setInterval(function() {
@@ -26,12 +28,19 @@ function timer() {
         if (countdownTime < 0) {
             clearInterval(interval);
             document.getElementById("countdown").innerHTML = "Take a break now!";
+            
+    new Audio('http://www.pacdv.com/sounds/domestic_sound_effects/alarm_clock_2.wav').play()
         }
 
         currentTime = Date.parse(new Date());
         countdownTime = deadline - currentTime;
     }, 1000);
+
 }
+    
+    
+    
+
 
 
 function pause() {
@@ -49,3 +58,4 @@ function resume() {
 function refresh() {
     window.location.reload();
 }
+// You are here, checking my code, wanting to know how it works or why doesn't it work? I got you, fam! Here's how it was made https://i.imgur.com/uP1gl2Z.gifv

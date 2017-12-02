@@ -1,5 +1,38 @@
-body {
-  background-image: url("http://moziru.com/images/cherry-tomato-clipart-transparent-13.png");
-  background-repeat: no-repeat;
-  background-size:cover;
+body { height:100%;
+       width:100%;
+      background-image: radial-gradient(red, green);
 }
+
+h1 {
+    margin-left: 600px;
+    font-size: 70px;
+}
+
+#firstdiv {
+    margin-left: 600px;
+    margin-bottom: 50px;
+    
+}
+
+#seconddiv {
+    margin-left: 600px;
+}
+#txt { 
+    margin-top: 100px;
+    margin-left: 175px;
+    margin-bottom: 100px;
+    height: 100%;
+    position: center;
+    font-size: 50px;
+    color:black;
+    
+}
+
+#countdown {
+    margin-left: 175px;
+    margin-top: 100px;
+   color:black;
+ font-size: 50px;
+    
+}
+

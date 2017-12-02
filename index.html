@@ -11,16 +11,21 @@
       <link type="text/css" rel="stylesheet" href="css/Dalmatino.css"/>
   </head>
   <body>
-    <h1>CRKNI, STOKO!</h1>
+    <h1>TIMER</h1>
+      <p id="txt"> Enter how many minutes you want to work below:</p>
+      
+      <div id="firstdiv">
       <input type="number" id="worktime" />
-      <input type="submit" value="Start" onclick="nesto()"/>
-      <div>
+      <input type="submit" id="start" value="Start" onclick="nesto()"/>
+        </div>  
+      <div id="seconddiv">
       <p id="demo"></p>
       <input type="submit" value="Pause" onclick="pause()"/>
       <input type="submit" value="Resume" onclick="resume()"/>
       <input type="submit" value="New Timer" onclick="refresh()"/>
       </div>
       <p id="countdown"/>
+      
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
