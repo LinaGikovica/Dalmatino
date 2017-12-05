@@ -6,7 +6,7 @@ function nesto() {
     var work = document.getElementById("worktime");
     var workvalue = work.value;
     var mnts = Number(workvalue);
-    if (mnts==0) {refresh(); alert ("Please add minutes");}
+    if (mnts<1) {refresh(); alert ("Please add minutes");}
 
     var timeInMinutes = mnts;
     var currentTime = Date.parse(new Date());
