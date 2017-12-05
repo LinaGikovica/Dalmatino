@@ -6,6 +6,7 @@ function nesto() {
     var work = document.getElementById("worktime");
     var workvalue = work.value;
     var mnts = Number(workvalue);
+    if (mnts==0) {refresh(); alert ("Please add minutes");}
 
     var timeInMinutes = mnts;
     var currentTime = Date.parse(new Date());
@@ -16,7 +17,7 @@ function nesto() {
 
 
 function timer() {
-    
+
     var currentTime = Date.parse(new Date());
     countdownTime = deadline - currentTime;
     interval = setInterval(function() {
@@ -28,8 +29,8 @@ function timer() {
         if (countdownTime < 0) {
             clearInterval(interval);
             document.getElementById("countdown").innerHTML = "Take a break now!";
-            
-    new Audio('http://www.pacdv.com/sounds/domestic_sound_effects/alarm_clock_2.wav').play()
+
+            new Audio('http://www.pacdv.com/sounds/domestic_sound_effects/alarm_clock_2.wav').play()
         }
 
         currentTime = Date.parse(new Date());
@@ -37,9 +38,7 @@ function timer() {
     }, 1000);
 
 }
-    
-    
-    
+
 
 
 
