@@ -2,11 +2,11 @@ var interval;
 var countdownTime;
 var deadline;
 
-function nesto() {
+function main() {
     var work = document.getElementById("worktime");
     var workvalue = work.value;
     var mnts = Number(workvalue);
-    if (mnts<1) {refresh(); alert ("Please add minutes");}
+    if (mnts<1) {refresh(); alert ("You forgot to add minutes. Please, do it or panda will cry :( ");}
 
     var timeInMinutes = mnts;
     var currentTime = Date.parse(new Date());
@@ -24,7 +24,7 @@ function timer() {
         var hours = Math.floor((countdownTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((countdownTime % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((countdownTime % (1000 * 60)) / 1000);
-        document.getElementById("countdown").innerHTML = "Work for " + hours + " hours " + minutes + " minutes " + seconds + " seconds more."
+        document.getElementById("countdown").innerHTML =  hours + " hours " + minutes + " minutes " + seconds + " seconds"
 
         if (countdownTime < 0) {
             clearInterval(interval);
